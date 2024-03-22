@@ -1,0 +1,57 @@
+.portfolio-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.portfolio-heading .second-word {
+    color: #ff6347; /* Желтый цвет */
+}
+
+.portfolio-heading p {
+    color: #ffcc00; /* Оранжевый цвет */
+}
+
+
+.product-card {
+    display: inline-block; /* Размещаем карточки в строку */
+    border: 1px solid #000; /* Цвет и толщина рамки */
+    padding: 20px; /* Отступы внутри рамки */
+    margin-right: 20px; /* Отступ между карточками */
+    margin-bottom: 20px; /* Отступ между рядами */
+    vertical-align: top; /* Выравниваем карточки по верхнему краю */
+}
+
+.product-card img {
+    margin-right: 10px; /* Отступ между иконками */
+}
+.product-card h2 {
+    margin-bottom: 10px; /* Отступ между названием и видео */
+}
+
+.product-card .product-video {
+    margin-top: 10px; /* Отступ между названием и видео */
+}
+
+.product-card .product-audio {
+    margin-top: 10px; /* Отступ между описанием и аудио */
+}
+
+/* Добавьте следующий CSS в portfolio.css */
+
+/* Обновленные стили для центрирования иконок */
+
+.social-icons {
+    display: flex; /* Располагаем иконки в строку */
+    justify-content: center; /* Центрируем их по горизонтали */
+    align-items: center; /* Центрируем их по вертикали */
+}
+
+.social-icons a {
+    margin: 0 5px; /* Добавляем небольшие отступы между иконками */
+}
+
+
+
+

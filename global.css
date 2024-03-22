@@ -1,0 +1,173 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(127, 255, 229), #ffffff, rgb(17, 52, 82));
+    background-size: 300% 100%;
+    animation: gradientAnimation 10s ease infinite;
+    position: relative;
+    overflow: hidden; /* Чтобы треугольник не выходил за границы контейнера */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+.mirrored-triangle {
+    width: 0;
+    height: 0;
+    border-right: 50vw solid transparent; /* половина ширины экрана */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: colorChange 10s linear infinite; /* добавляем анимацию смены цвета */
+}
+
+.mirrored-triangle-top {
+    width: 0;
+    height: 0;
+    border-right: 50vw solid transparent; /* половина ширины экрана */
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: colorChange 10s linear infinite; /* добавляем анимацию смены цвета */
+}
+
+@keyframes colorChange {
+    0% {
+        border-bottom: 100vh solid #48637e; /* начальный цвет */
+        border-top: 100vh solid #48637e; /* начальный цвет */
+    }
+    25% {
+        border-bottom: 100vh solid #2d4b69; /* цвет на 0-10 секундах */
+        border-top: 100vh solid #2d4b69; /* цвет на 0-10 секундах */
+    }
+    50%, 75%, 100% {
+        border-bottom: 100vh solid #113452; /* конечный цвет */
+        border-top: 100vh solid #113452; /* конечный цвет */
+    }
+}
+
+/* Устанавливаем стили для общего контейнера контента */
+.content {
+    /* Ваши текущие стили */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    background-color: rgba(17, 52, 82, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    overflow-y: auto; /* Добавить вертикальную прокрутку */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: Arial, sans-serif;
+    /* Добавляем анимацию */
+    animation: fadeIn 2s ease;
+}
+
+/* Анимация появления страницы */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Устанавливаем стили для информации о профиле */
+.profile-info, .profile-details {
+    margin-top: 15%; /* Добавляем отступ сверху для опускания элемента ниже */
+}
+
+/* Устанавливаем стили для изображения профиля */
+.content img {
+    max-width: 100%; /* Максимальная ширина изображения равна ширине родительского контейнера */
+    height: auto; /* Автоматическое подстраивание высоты для сохранения пропорций */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+}
+
+/* Устанавливаем стили для заголовков */
+.content h2, .content p {
+    margin: 0; /* Убираем отступы у заголовков и параграфов */
+    padding-right: 20px; /* Добавляем отступ текста справа */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень текста */
+    font-size: 1.5em; /* Увеличиваем размер текста */
+    width: 100%; /* Заполняем текст по ширине контейнера */
+    box-sizing: border-box; /* Учитываем padding и border внутри ширины элемента */
+
+}
+
+/* Устанавливаем стили для изображений внутри значков социальных сетей */
+.social-icons a img {
+    margin-top: 10px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу */
+    margin-right: 10px;
+}
+
+/* Изменяем цвет значков при наведении мыши */
+.social-icons a:hover img {
+    filter: invert(32%) sepia(100%) saturate(3459%) hue-rotate(5deg) brightness(96%) contrast(92%);
+}
+
+/* Добавляем анимацию и ключевые кадры для кнопок */
+button {
+    /* Ваши текущие стили */
+    font-size: inherit;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 2s;
+    /* Добавляем анимацию */
+    animation: fadeInButton 2.5s ease;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+/* Анимация для кнопок */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
