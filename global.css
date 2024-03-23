@@ -125,3 +125,48 @@ button:hover {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
+
+.logo {
+    position: absolute;
+    top: 40px;
+    right: 280px;
+    z-index: 1000;
+    /* Устанавливаем начальные координаты и включаем анимацию */
+    animation: spin 20s linear infinite;
+    /* Центрируем манекен по горизонтали */
+    transform-origin: center center;
+}
+
+/* Определение анимации */
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg); /* Начальный угол вращения */
+    }
+    100% {
+        transform: rotateY(360deg); /* Угол вращения на 360 градусов */
+    }
+}
+
+/* Стили для полосы прокрутки */
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Стили для блока, который представляет ползунок */
+.content::-webkit-scrollbar-thumb {
+    background-color: rgb(72, 99, 126);
+    border-radius: 6px;
+}
+
+/* Стили для трека, который представляет область вокруг ползунка */
+.content::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Стили для ползунка при наведении */
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(17, 52, 82);
+}
+
+

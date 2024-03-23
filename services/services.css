@@ -1,0 +1,83 @@
+/* Общие стили */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Обновленные общие стили для заголовков и ячеек таблицы */
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 2px solid #ffcc00;
+    font-size: 20px; /* Увеличиваем размер шрифта */
+    font-weight: bold; /* Делаем текст жирным */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+}
+
+
+/* Обновленные стили для заголовка таблицы */
+th {
+    font-size: 21px; /* Увеличиваем размер шрифта */
+    font-weight: bold; /* Делаем текст жирным */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+    background-color: #ffcc00;
+    color: #333;
+}
+
+
+/* Стили для ячеек с описанием */
+td:nth-child(2) {
+    width: 75%;
+}
+
+/* Стили для цен */
+td:nth-child(3) {
+    font-weight: bold;
+    color: #ff5733; /* Цвет текста цены */
+}
+
+/* Подчеркивание заголовка таблицы */
+th:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin-top: 8px;
+}
+
+/* Анимация подчеркивания */
+th:hover:after {
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Анимация при наведении на строку */
+tr:hover {
+    background-color: #113452;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Стили для квадратиков */
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+.checkbox.checked:after {
+    content: "\2713"; /* Галочка */
+    font-size: 16px;
+    color: #ffd700;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* Стили для итогового блока */
+#summary {
+    margin-top: 20px;
+    text-align: right; /* Выравниваем текст в правый нижний угол */
+}
