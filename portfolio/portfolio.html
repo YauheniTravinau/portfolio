@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="/menu/menu.css">
 </head>
@@ -19,8 +18,15 @@
 <div id="content" class="content">
     <div class="portfolio-heading">
         <p>AI-<span class="second-word">PORTFOLIO</span></p>
-    </div>
+        <button class="button-with-icon" onclick="openPdf('cv_pl.pdf')">
+            <img src="/images/download-24.png" alt="CV PL Icon"> Download CV - PL
+        </button>
 
+        <button class="button-with-icon" onclick="openPdf('cv_en.pdf')">
+            <img src="/images/download-24.png" alt="CV EN Icon"> Download CV - EN
+        </button>
+    </div>
+    <br>
     <!-- Карточка 1 -->
     <div class="product-card">
         <h2>Проект 1</h2>

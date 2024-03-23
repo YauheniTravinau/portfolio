@@ -1,3 +1,4 @@
+/* styles.css */
 .menu {
     position: fixed;
     top: 50%;
@@ -31,7 +32,6 @@
     position: relative;
     transition: transform 0.2s ease;
 }
-
 
 .icon::before {
     content: '';
@@ -79,7 +79,6 @@
     display: none; /* Скрыть подсказку по умолчанию */
 }
 
-.icon:hover .tooltip {
-    display: block; /* Показать подсказку при наведении на иконку */
+.active .tooltip {
+    display: block;
 }
-

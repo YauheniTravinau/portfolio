@@ -29,3 +29,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showNextTitle(); // Начать анимацию с первого заголовка
 });
+
+// Получаем параграф с классом "jobTitle"
+const jobTitle = document.querySelector('#jobTitles .jobTitle');
+
+// Массив с различными вариантами текста
+const titles = [
+    "Веб-разработчик | Фронтенд-разработчик | Дизайнер веб-сайтов",
+    "Графический дизайнер | Специалист по монтажу видео | Специалист по визуальным эффектам",
+    "Веб-дизайнер | Веб-мастер | Специалист по оптимизации SEO",
+    "Специалист по анимации веб-сайтов | Веб-инженер | Веб-программист",
+    "Специалист по веб-хостингу и доменам | Full-stack разработчик"
+];
+
+let currentIndex = 0;
+
+function switchText() {
+    jobTitle.textContent = titles[currentIndex];
+    currentIndex++;
+    if (currentIndex >= titles.length) {
+        currentIndex = 0;
+    }
+}
+
+setInterval(switchText, 3000);

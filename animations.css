@@ -1,0 +1,39 @@
+/* Анимация фона */
+.animated-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(127, 255, 229), #ffffff, rgb(17, 52, 82));
+    background-size: 300% 100%;
+    animation: gradientAnimation 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Анимация изменения цвета треугольников */
+.mirrored-triangle, .mirrored-triangle-top {
+    width: 0;
+    height: 0;
+    border-right: 50vw solid transparent;
+    position: fixed;
+    animation: colorChange 10s linear infinite;
+}
+
+.mirrored-triangle { bottom: 0; left: 0; }
+.mirrored-triangle-top { top: 0; left: 0; }
+
+@keyframes colorChange {
+    0%, 25% { border-bottom: 100vh solid #48637e; border-top: 100vh solid #48637e; }
+    50%, 75%, 100% { border-bottom: 100vh solid #113452; border-top: 100vh solid #113452; }
+}
+
+/* Анимация для кнопок */
+@keyframes fadeInButton {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

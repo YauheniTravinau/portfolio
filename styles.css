@@ -1,19 +1,17 @@
-
-
-#jobTitles p {
-    position: relative;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    font-size: 24px; /* Увеличиваем размер текста */
-    color: #ff6347; /* Цвет текста */
-    font-family: 'Pacifico', cursive; /* Красивый шрифт */
+#jobTitles {
+    text-align: center; /* Центрируем текст */
 }
 
-#jobTitles p.active {
+#jobTitles .jobTitle {
+    position: relative;
+    font-size: 24px;
+    color: #ff6347;
+    transition: opacity 0.5s ease; /* Плавное изменение непрозрачности */
+}
+
+#jobTitles .jobTitle.active {
     opacity: 1;
 }
-
-
 
 .thumbnail {
     width: 200px;
@@ -22,11 +20,11 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 20px; /* Отступ от текста */
+    margin-top: 20px;
 }
 
 .smiley {
-    font-size: 30px; /* Уменьшенный размер шрифта */
+    font-size: 30px;
     position: absolute;
     left: 0;
     transform: translateY(-50%);
@@ -38,6 +36,19 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(100px);
+        transform: translateX(145px);
     }
+}
+
+/* Стили для контейнера контента */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-details button {
+    margin-right: 20px; /* Измените значение по вашему усмотрению */
 }
