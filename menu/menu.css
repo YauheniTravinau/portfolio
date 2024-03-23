@@ -79,7 +79,7 @@
     display: none; /* Скрыть подсказку по умолчанию */
 }
 
-.active .tooltip {
+.icon:hover .tooltip {
     display: block;
 }
 

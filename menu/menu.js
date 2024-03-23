@@ -1,10 +1,7 @@
-// Получаем текущий путь страницы
-let currentPath = window.location.pathname;
-
-// Находим ссылку в меню с текущим путем и добавляем класс "active"
-let menuLinks = document.querySelectorAll('.menu a');
-menuLinks.forEach(function(link) {
-    if (link.getAttribute('href') === currentPath) {
-        link.classList.add('active');
-    }
+const icons = document.querySelectorAll('.icon');
+icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        icons.forEach(i => i.classList.remove('active'));
+        icon.classList.add('active');
+    });
 });
