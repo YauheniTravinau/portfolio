@@ -32,7 +32,6 @@
     transition: transform 0.2s ease;
 }
 
-
 .icon::before {
     content: '';
     position: absolute;
@@ -69,17 +68,16 @@
 .tooltip {
     position: absolute;
     top: 50%;
-    right: 80px; /* Изменено с left на right */
-    margin-right: 10px; /* Добавлен отступ справа */
+    right: 80px;
+    margin-right: 10px;
     transform: translateY(-50%);
     background-color: rgb(72, 99, 126);
     color: #ffd700;
     padding: 5px 10px;
     border-radius: 5px;
-    display: none; /* Скрыть подсказку по умолчанию */
+    display: none;
 }
 
 .icon:hover .tooltip {
     display: block;
 }
-
