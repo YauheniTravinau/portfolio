@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const icons = document.querySelectorAll(".icon");
+    let icons = document.querySelectorAll('.icon');
+    let activeIconIndex = localStorage.getItem('activeIconIndex');
 
-    icons.forEach(icon => {
-        icon.addEventListener("click", function() {
-            // Remove 'active' class from all icons
-            icons.forEach(icon => {
-                icon.classList.remove("active");
-            });
+    if (activeIconIndex !== null) {
+        icons[parseInt(activeIconIndex)].classList.add('active'); // Преобразуем строку в число
+    }
 
-            // Add 'active' class to the clicked icon
-            icon.classList.add("active");
+    icons.forEach(function(icon, index) {
+        icon.addEventListener('click', function() {
+            let activeIcon = document.querySelector('.icon.active');
+            if (activeIcon) {
+                activeIcon.classList.remove('active');
+            }
+            this.classList.add('active');
+            localStorage.setItem('activeIconIndex', index.toString()); // Преобразуем число в строку перед сохранением в localStorage
         });
     });
 });
-
