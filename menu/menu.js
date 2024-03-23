@@ -1,19 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let icons = document.querySelectorAll('.icon');
-    let activeIconIndex = localStorage.getItem('activeIconIndex');
+let currentUrl = window.location.pathname;
 
-    if (activeIconIndex !== null) {
-        icons[parseInt(activeIconIndex)].classList.add('active'); // Преобразуем строку в число
+// Получаем все ссылки в меню
+let menuLinks = document.querySelectorAll('#menu a');
+
+// Проходимся по каждой ссылке
+menuLinks.forEach(function(link) {
+    // Если URL ссылки совпадает с текущим URL страницы, добавляем класс 'active'
+    if (link.getAttribute('href') === currentUrl) {
+        link.classList.add('active');
     }
-
-    icons.forEach(function(icon, index) {
-        icon.addEventListener('click', function() {
-            let activeIcon = document.querySelector('.icon.active');
-            if (activeIcon) {
-                activeIcon.classList.remove('active');
-            }
-            this.classList.add('active');
-            localStorage.setItem('activeIconIndex', index.toString()); // Преобразуем число в строку перед сохранением в localStorage
-        });
-    });
 });
